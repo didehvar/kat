@@ -1,24 +1,17 @@
 {
-  "name": "aurelia-skeleton-navigation-typescript",
-  "version": "1.0.0-beta.1.1.2",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia and TypeScript.",
-  "keywords": [
-    "aurelia",
-    "navigation",
-    "skeleton",
-    "typescript",
-    "vscode"
-  ],
-  "homepage": "http://aurelia.io",
+  "name": "metrics",
+  "version": "0.0.1",
+  "description": "Metrics!",
+  "private": true,
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation-typescript/issues"
+    "url": "https://github.com/didehvar/metrics/issues"
   },
-  "license": "CC0-1.0",
-  "author": "Mike Graham <mgraham@technicalmedia.com> (http://cmichaelgraham.io/)",
+  "license": "MIT",
+  "author": "James Didehvar <james@didehvar.com> (http://didehvar.uk/)",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-navigation-typescript"
+    "url": "http://github.com/didehvar/metrics"
   },
   "scripts": {
     "test": "gulp test",

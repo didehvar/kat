@@ -2,7 +2,7 @@ import {ChildRouter} from '../../src/child-router';
 
 class RouterStub {
   routes;
-  
+
   configure(handler) {
     handler(this);
   }

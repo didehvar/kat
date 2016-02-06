@@ -2,11 +2,11 @@ import {App} from '../../src/app';
 
 class RouterStub {
   routes;
-  
+
   configure(handler) {
     handler(this);
   }
-  
+
   map(routes) {
     this.routes = routes;
   }
