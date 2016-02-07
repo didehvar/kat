@@ -1,17 +1,17 @@
 {
-  "name": "metrics",
+  "name": "kat",
   "version": "0.0.1",
-  "description": "Metrics!",
+  "description": "Kat!",
   "private": true,
   "bugs": {
-    "url": "https://github.com/didehvar/metrics/issues"
+    "url": "https://github.com/didehvar/kat/issues"
   },
   "license": "MIT",
   "author": "James Didehvar <james@didehvar.com> (http://didehvar.uk/)",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/didehvar/metrics"
+    "url": "http://github.com/didehvar/kat"
   },
   "scripts": {
     "test": "gulp test",
