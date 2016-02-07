@@ -7,7 +7,7 @@ module.exports = function (wallaby) {
       {pattern: 'jspm_packages/system.js', instrument: false},
       {pattern: 'config.js', instrument: false},
 
-      {pattern: 'src/**/*.ts', load: false}
+      {pattern: 'app/**/*.ts', load: false}
 
     ],
 
@@ -26,7 +26,7 @@ module.exports = function (wallaby) {
       System.config({
         paths: {
           "*": null,
-          "src/*": "src/*",
+          "app/*": "app/*",
           "typescript": "node_modules/typescript/lib/typescript.js",
           "systemjs": "node_modules/systemjs/dist/system.js",
           'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
@@ -36,7 +36,7 @@ module.exports = function (wallaby) {
           'test/unit': {
             defaultExtension: 'ts'
           },
-          'src': {
+          'app': {
             defaultExtension: 'ts'
           }
         },

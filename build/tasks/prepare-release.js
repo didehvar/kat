@@ -22,9 +22,9 @@ gulp.task('changelog', function(callback) {
   return changelog({
     repository: pkg.repository.url,
     version: pkg.version,
-    file: paths.doc + '/CHANGELOG.md'
+    file: paths.app.doc + '/CHANGELOG.md'
   }, function(err, log) {
-    fs.writeFileSync(paths.doc + '/CHANGELOG.md', log);
+    fs.writeFileSync(paths.app.doc + '/CHANGELOG.md', log);
   });
 });
 

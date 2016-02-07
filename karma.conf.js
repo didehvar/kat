@@ -7,7 +7,7 @@ module.exports = function(config) {
       config: {
         paths: {
           "*": null,
-          "src/*": "src/*",
+          "app/*": "app/*",
           "typescript": "node_modules/typescript/lib/typescript.js",
           "systemjs": "node_modules/systemjs/dist/system.js",
           'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
@@ -17,14 +17,14 @@ module.exports = function(config) {
           'test/unit': {
             defaultExtension: 'ts'
           },
-          'src': {
+          'app': {
             defaultExtension: 'ts'
           }
         },
         transpiler: 'typescript'
       },
       serveFiles: [
-        'src/**/*.ts',
+        'app/**/*.ts',
         'jspm_packages/**/*.js'
       ]
     },

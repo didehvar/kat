@@ -8,7 +8,7 @@ var resources = require('../export.json');
 
 // deletes all files in the output path
 gulp.task('clean-export', function() {
-  return gulp.src([paths.exportSrv])
+  return gulp.src([paths.app.exportSrv])
     .pipe(vinylPaths(del));
 });
 
@@ -26,7 +26,7 @@ function getExportList() {
 
 gulp.task('export-copy', function() {
   return gulp.src(getExportList(), {base: "."})
-    .pipe(gulp.dest(paths.exportSrv));
+    .pipe(gulp.dest(paths.app.exportSrv));
 });
 
 // use after prepare-release

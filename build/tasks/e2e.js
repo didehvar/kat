@@ -8,7 +8,7 @@ var typescript = require('gulp-typescript');
 var tsc = require('typescript');
 var del = require('del');
 
-var tsProject = typescript.createProject('./tsconfig.json', {
+var tsProject = typescript.createProject('./app/tsconfig.json', {
   typescript: tsc,
   module: 'commonjs'
 });
@@ -19,23 +19,23 @@ gulp.task('webdriver-update', webdriverUpdate);
 gulp.task('webdriver-standalone', ['webdriver-update'], webdriverStandalone);
 
 gulp.task('clean-e2e', function() {
-  return del(paths.e2eSpecsDist + '*');
+  return del(paths.app.e2eSpecsDist + '*');
 });
 
 // transpiles files in
 // /test/e2e/src/ from es6 to es5
 // then copies them to test/e2e/dist/
 gulp.task('build-e2e', ['clean-e2e'], function() {
-  return gulp.src(paths.dtsSrc.concat(paths.e2eSpecsSrc))
+  return gulp.src(paths.app.dtsSrc.concat(paths.app.e2eSpecsSrc))
     .pipe(typescript(tsProject))
-    .pipe(gulp.dest(paths.e2eSpecsDist));
+    .pipe(gulp.dest(paths.app.e2eSpecsDist));
 });
 
 // runs build-e2e task
 // then runs end to end tasks
 // using Protractor: http://angular.github.io/protractor/
 gulp.task('e2e', ['build-e2e'], function(cb) {
-  return gulp.src(paths.e2eSpecsDist + '**/*.js')
+  return gulp.src(paths.app.e2eSpecsDist + '**/*.js')
     .pipe(protractor({
       configFile: 'protractor.conf.js',
       args: ['--baseUrl', 'http://127.0.0.1:9000']

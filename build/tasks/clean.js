@@ -4,7 +4,12 @@ var del = require('del');
 var vinylPaths = require('vinyl-paths');
 
 // deletes all files in the output path
-gulp.task('clean', function() {
-  return gulp.src([paths.output])
+gulp.task('clean-app', function() {
+  return gulp.src([paths.app.output])
+    .pipe(vinylPaths(del));
+});
+
+gulp.task('clean-api', function() {
+  return gulp.src([paths.api.output])
     .pipe(vinylPaths(del));
 });
