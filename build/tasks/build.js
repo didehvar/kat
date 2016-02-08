@@ -82,3 +82,5 @@ gulp.task('build-api', function(callback) {
     callback
   );
 });
+
+gulp.task('build', ['build-app', 'build-api']);
